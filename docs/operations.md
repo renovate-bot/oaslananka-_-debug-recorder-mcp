@@ -9,7 +9,7 @@ npx debug-recorder-mcp
 ```
 
 Use `DEBUG_RECORDER_DB` to place the SQLite database somewhere other than
-`~/.mcp-debug-recorder/sessions.db`.
+`~/.debug-recorder-mcp/sessions.db`.
 
 ## Local HTTP
 

@@ -30,7 +30,7 @@ Examples of issues that are in scope:
 
 ## Data Privacy
 
-All session data is stored locally at `~/.mcp-debug-recorder/sessions.db` unless you override `DEBUG_RECORDER_DB`.
+All session data is stored locally at `~/.debug-recorder-mcp/sessions.db` unless you override `DEBUG_RECORDER_DB`.
 
 The package does not send debug history to external services. Streamable HTTP
 mode binds to `127.0.0.1` by default, validates `Host`, validates `Origin` when

@@ -5,7 +5,7 @@ This project publishes in two layers:
 1. The installable npm package: `debug-recorder-mcp`
 2. The Official MCP Registry metadata entry
 
-The former `mcp-debug-recorder` npm name was unpublished and is no longer the
+The former `debug-recorder-mcp` npm name was unpublished and is no longer the
 documented public artifact. New releases use `debug-recorder-mcp`, which matches
 the repository name and the release workflow package identifiers.
 
@@ -47,12 +47,12 @@ not only against the repository contents.
 
 ## Release Decision Matrix
 
-| Change type | Bump npm version? | Publish npm? | Publish MCP Registry? | Registry version |
-| --- | --- | --- | --- | --- |
-| Runtime or tool behavior change | Yes | Yes | Yes | Match npm version |
-| Public API, transport, packaging, install change | Yes | Yes | Yes | Match npm version |
-| Docs-only or internal-only change | No | No | No | No change |
-| Registry metadata-only fix | No | No | Yes | Use prerelease, e.g. `1.3.4-1` |
+| Change type                                      | Bump npm version? | Publish npm? | Publish MCP Registry? | Registry version               |
+| ------------------------------------------------ | ----------------- | ------------ | --------------------- | ------------------------------ |
+| Runtime or tool behavior change                  | Yes               | Yes          | Yes                   | Match npm version              |
+| Public API, transport, packaging, install change | Yes               | Yes          | Yes                   | Match npm version              |
+| Docs-only or internal-only change                | No                | No           | No                    | No change                      |
+| Registry metadata-only fix                       | No                | No           | Yes                   | Use prerelease, e.g. `1.3.4-1` |
 
 ## Recommended Patterns
 

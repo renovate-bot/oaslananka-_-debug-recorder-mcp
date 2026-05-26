@@ -9,4 +9,4 @@ test-results
 *.log
 .env
 doppler.yaml
-mcp-debug-recorder-*.tgz
+debug-recorder-mcp-*.tgz

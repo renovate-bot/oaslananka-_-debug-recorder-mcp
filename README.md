@@ -16,7 +16,7 @@ Requires Node.js 22 LTS or 24 LTS.
 npx debug-recorder-mcp
 ```
 
-By default, data is stored at `~/.mcp-debug-recorder/sessions.db`. The storage
+By default, data is stored at `~/.debug-recorder-mcp/sessions.db`. The storage
 directory keeps the original name so existing local histories continue to load.
 
 ## Architecture
@@ -152,7 +152,7 @@ Call `find_similar_errors` with the current error text, then inspect the best ma
 
 ## Data Storage
 
-- Default path: `~/.mcp-debug-recorder/sessions.db`
+- Default path: `~/.debug-recorder-mcp/sessions.db`
 - Portable SQLite storage with `better-sqlite3`
 - FTS5-backed search index for large histories
 - No external database server required

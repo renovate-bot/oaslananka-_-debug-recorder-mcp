@@ -6,7 +6,7 @@ import { log } from './logging.js';
 
 const DEFAULT_DB_PATH = path.join(
   os.homedir(),
-  '.mcp-debug-recorder',
+  '.debug-recorder-mcp',
   'sessions.db'
 );
 
