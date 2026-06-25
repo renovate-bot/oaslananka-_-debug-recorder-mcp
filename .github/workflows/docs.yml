@@ -65,7 +65,8 @@ jobs:
           cp -R /tmp/debug-recorder-mcp-site/. .
           git add -A
           git commit -m "docs: publish ${GITHUB_SHA}"
-          git -c http.https://github.com/.extraheader="AUTHORIZATION: bearer ${GH_TOKEN}" push origin gh-pages --force
+          gh auth setup-git
+          git push origin gh-pages --force
 
       - name: Print published URL
         run: echo "Docs are published at https://oaslananka.github.io/debug-recorder-mcp/"
