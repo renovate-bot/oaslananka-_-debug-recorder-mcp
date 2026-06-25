@@ -17,8 +17,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
-  pages: write
+  contents: read
 
 concurrency:
   group: docs-${{ github.ref }}
@@ -30,11 +29,13 @@ jobs:
     if: ${{ github.repository == 'oaslananka/debug-recorder-mcp' }}
     runs-on: ubuntu-24.04
     timeout-minutes: 20
+    permissions:
+      contents: write # publish generated static site to the gh-pages branch
     steps:
       - name: Checkout
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
-          persist-credentials: true
+          persist-credentials: false
           fetch-depth: 0
 
       - name: Setup Node.js
@@ -51,6 +52,8 @@ jobs:
 
       - name: Publish gh-pages branch
         shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
           rm -rf /tmp/debug-recorder-mcp-site
@@ -62,17 +65,7 @@ jobs:
           cp -R /tmp/debug-recorder-mcp-site/. .
           git add -A
           git commit -m "docs: publish ${GITHUB_SHA}"
-          git push origin gh-pages --force
+          git -c http.https://github.com/.extraheader="AUTHORIZATION: bearer ${GH_TOKEN}" push origin gh-pages --force
 
-      - name: Ensure GitHub Pages source
-        shell: bash
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          set -euo pipefail
-          gh api "/repos/${GITHUB_REPOSITORY}/pages" >/dev/null 2>&1 && method=PUT || method=POST
-          gh api --method "${method}" "/repos/${GITHUB_REPOSITORY}/pages" \
-            -F source[branch]=gh-pages \
-            -F source[path]=/ \
-            >/dev/null
-          echo "Docs should be published at https://oaslananka.github.io/debug-recorder-mcp/"
+      - name: Print published URL
+        run: echo "Docs are published at https://oaslananka.github.io/debug-recorder-mcp/"
