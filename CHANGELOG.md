@@ -4,6 +4,23 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.2.0](https://github.com/renovate-bot/oaslananka-_-debug-recorder-mcp/compare/debug-recorder-mcp-v1.1.0...debug-recorder-mcp-v1.2.0) (2026-07-20)
+
+
+### Features
+
+* harden MCP schemas and HTTP transport ([8c97d7e](https://github.com/renovate-bot/oaslananka-_-debug-recorder-mcp/commit/8c97d7e1bcadf5867587a7ded5bacb19f8d74745))
+
+
+### Bug Fixes
+
+* **mcp:** align export output schemas ([#68](https://github.com/renovate-bot/oaslananka-_-debug-recorder-mcp/issues/68)) ([0b511dd](https://github.com/renovate-bot/oaslananka-_-debug-recorder-mcp/commit/0b511ddccecf4e56675d702583bf4f0d946d48a3))
+* **packaging:** align package metadata and release flow ([#13](https://github.com/renovate-bot/oaslananka-_-debug-recorder-mcp/issues/13)) ([bba60a5](https://github.com/renovate-bot/oaslananka-_-debug-recorder-mcp/commit/bba60a5a961ffc52b5c671fbc83242899a999661))
+* **release:** publish downloaded npm tarball path ([#15](https://github.com/renovate-bot/oaslananka-_-debug-recorder-mcp/issues/15)) ([9cfa683](https://github.com/renovate-bot/oaslananka-_-debug-recorder-mcp/commit/9cfa68387d6f2a2a0ee053bd1b0b83f46d41f388))
+* **security:** restore dependency and workflow gates ([#12](https://github.com/renovate-bot/oaslananka-_-debug-recorder-mcp/issues/12)) ([436dcb9](https://github.com/renovate-bot/oaslananka-_-debug-recorder-mcp/commit/436dcb9a64584c03a54058180f18c25ae0e6c347)), closes [#3](https://github.com/renovate-bot/oaslananka-_-debug-recorder-mcp/issues/3)
+* unblock CI audit and approve install scripts ([0bc399f](https://github.com/renovate-bot/oaslananka-_-debug-recorder-mcp/commit/0bc399fd116777b41594e7f5f7d2b4b0d157ce88))
+* unblock npm audit and approve install scripts ([f86a824](https://github.com/renovate-bot/oaslananka-_-debug-recorder-mcp/commit/f86a824d85a1e37134998c096c5b174be919b126))
+
 ## [1.1.0](https://github.com/oaslananka/debug-recorder-mcp/compare/debug-recorder-mcp-v1.0.3...debug-recorder-mcp-v1.1.0) (2026-06-25)
 
 
